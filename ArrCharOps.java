@@ -166,6 +166,9 @@ public class ArrCharOps {
     int length2 = str2.length();
     
     for (int i = 0; i < Math.min(length1, length2); i++) {
+        if (str1 == null || str2 == null || str1.length() == 0 || str2.length() == 0) {
+            return -2;
+        }
         char c1 = str1.charAt(i);
         char c2 = str2.charAt(i);
         if (c1 < c2) {
